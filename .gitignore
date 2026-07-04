@@ -1,0 +1,22 @@
+.DS_Store
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Local deployment and agent config
+.vercel/
+.claude/
+.codex/
+AGENTS.md
+CLAUDE.md
+
+# Dependencies and generated output
+node_modules/
+out/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*

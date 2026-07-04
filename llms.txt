@@ -1,0 +1,13 @@
+# ShitClaude
+
+> Local-first Claude and Codex region profile scanner. It estimates how strongly browser and IP signals point to non-US regional usage.
+
+## Key Pages
+
+- [Scanner](https://shitclaude.site/zh/): Main Claude / Codex region profile scanner.
+- [Methodology](https://shitclaude.site/methodology/): Explanation of the 14 weighted browser and IP signals.
+- [Privacy Policy](https://shitclaude.site/privacy/): Local-first privacy model, IP lookup, and advertising disclosure.
+
+## Notes
+
+ShitClaude is not affiliated with Anthropic, Claude, OpenAI, or Codex. Scores are educational estimates, not official provider risk decisions.

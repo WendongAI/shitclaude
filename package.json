@@ -1,0 +1,21 @@
+{
+  "name": "shitclaude-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/script.test.js",
+    "video:preview": "remotion studio src/index.ts",
+    "video:still": "remotion still src/index.ts ShitClaudePromo out/shitclaude-promo-cover.png --frame=500",
+    "video:frames": "rm -rf out/frames && remotion render src/index.ts ShitClaudePromo out/frames --sequence --image-sequence-pattern='frame-[frame].[ext]' --muted",
+    "video:render": "npm run video:frames && ffmpeg -y -framerate 30 -i out/frames/frame-%03d.jpeg -c:v libx264 -pix_fmt yuv420p -movflags +faststart out/shitclaude-promo.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.484",
+    "happy-dom": "20.10.6",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.484"
+  },
+  "devDependencies": {}
+}
