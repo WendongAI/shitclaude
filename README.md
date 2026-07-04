@@ -4,9 +4,25 @@ Private-by-default Claude and Codex region profile scanner.
 
 [Open the live scanner](https://shitclaude.site/zh/) · [Methodology](https://shitclaude.site/methodology/) · [Privacy](https://shitclaude.site/privacy/)
 
+![ShitClaude scanner result screenshot](public/preview/shitclaude-zh-hit.png)
+
 ShitClaude is a tiny browser-based tool that shows how regional fingerprints can make a Claude or Codex user look "non-US" or "high risk". It combines local browser signals with optional server-side IP geolocation, turns them into a 0-100 score, and explains which signals contributed to the result.
 
 It is not affiliated with Anthropic, Claude, OpenAI, or Codex. The project is a research and education demo with an intentionally irreverent brand.
+
+## 中文介绍
+
+ShitClaude 是一个本地优先的 Claude / Codex 地区画像检测工具，用来展示你的浏览器和网络环境会暴露哪些“地区特征”：系统时区、浏览器语言、Intl 区域、中文字体、WebGL/GPU、数字和日期格式、键盘布局、屏幕 DPI、Emoji 渲染，以及服务端 IP 地理位置。
+
+它会把这些信号加权成 0-100 的风险分，并解释每一项命中的原因。项目默认不需要登录、不接数据库、不上传检测结果；只有 IP 检测会通过 `/api/geo` 做一次地理位置查询。
+
+这个项目适合：
+
+- 想了解 Claude / Codex 地区风控信号的用户
+- 想学习浏览器指纹和 IP 交叉验证的开发者
+- 想做轻量工具站、SEO 页面和 AdSense 变现验证的独立开发者
+
+免责声明：ShitClaude 不是 Anthropic、Claude、OpenAI 或 Codex 的官方项目，分数只是外部可见信号的估计，不代表真实封号结论。
 
 ## Why This Exists
 
@@ -55,6 +71,7 @@ If you deploy your own fork, your hosting provider may still keep access logs. I
 ├── methodology/            # Methodology page for SEO and transparency
 ├── privacy/                # Privacy policy for ads and trust
 ├── public/mascot/          # Mascot image assets
+├── public/preview/         # README screenshots
 ├── tests/script.test.js    # Unit tests for scoring and DOM assumptions
 ├── zh/                     # Main static scanner page
 ├── src/                    # Remotion promo video composition
