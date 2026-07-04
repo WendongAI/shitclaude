@@ -1,4 +1,6 @@
-# ShitClaude
+# ShitClaude 
+
+检测地址： https://shitclaude.site
 
 Private-by-default Claude and Codex region profile scanner.
 
